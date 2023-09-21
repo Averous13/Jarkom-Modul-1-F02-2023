@@ -68,3 +68,34 @@ Protokol yang digunakan adalah UDP berdasarkan uji coba pencarian dengan udp dan
 Berikut adalah hasil flag yang telah didapatkan
 
 ![terminal3](terminal13.png)
+
+## SOAL 4
+#### Berapa nilai checksum yang didapat dari header pada paket nomor 130?
+
+![CHECKSUM](nomer4cek.png)
+
+Berdasarkan detail packet dari wireshark kita mendapatkan nilai checksum 
+
+## SOAL 5
+#### Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
+
+Pengerjaan nomer 5 diberikan 2 file yaitu pcap dan zip file. soal yang sebenarnya tersimpan di dalam zip file dengan password untuk mengaksesnya. Password didapatkan dari hasil capture dengan protokol SMTP sebab mengandung pesan email yang memiliki password. Pada email tersebut password masih dalam bentuk kode enkripsi yang perlu diterjemahan terlebih dahulu. Enkripsi base64. Kemudian kita gunakan decrypt online untuk menerjemahkannya.
+
+#### a. Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
+#### b. Port berapakah pada server yang digunakan untuk service SMTP?
+#### c. Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
+
+## SOAL 6
+#### Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
+
+## SOAL 7
+#### Berapa jumlah packet yang menuju IP 184.87.193.88?
+
+## SOAL 8
+#### Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
+
+## SOAL 9
+#### Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
+
+## SOAL 10
+#### Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
