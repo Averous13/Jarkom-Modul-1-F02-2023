@@ -1,4 +1,4 @@
-![image](https://github.com/Averous13/Jarkom-Modul-1-F02-2023/assets/92216719/70431da0-a979-49bb-85ff-0cd259682f09)# Jarkom-Modul-1-F02-2023
+# Jarkom-Modul-1-F02-2023
 Laporan resmi praktikum jaringan komputer 2023
 
 |NAMA|NRP|
@@ -72,7 +72,7 @@ Berikut adalah hasil flag yang telah didapatkan
 ## SOAL 4
 #### Berapa nilai checksum yang didapat dari header pada paket nomor 130?
 
-![CHECKSUM](4cheksum.png)
+![CHECKSUM](4checksum.png)
 
 Berdasarkan detail packet dari wireshark kita mendapatkan nilai checksum 0x18e5 
 
