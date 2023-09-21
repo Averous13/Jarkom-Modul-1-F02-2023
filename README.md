@@ -1,4 +1,4 @@
-# Jarkom-Modul-1-F02-2023
+![image](https://github.com/Averous13/Jarkom-Modul-1-F02-2023/assets/92216719/70431da0-a979-49bb-85ff-0cd259682f09)# Jarkom-Modul-1-F02-2023
 Laporan resmi praktikum jaringan komputer 2023
 
 |NAMA|NRP|
@@ -117,12 +117,38 @@ Hasil Flag yang didapat
 ## SOAL 6
 #### Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
 
+Masalah yang muncul berupa SOURCE ADDRESS 7812 is invalid, dimana ketika dilakukan pencarian melalui google didapatkan a1 e5 u21. Jika kita teliti kembali sebenarnya hasil pencarian berupa hasil persamaan dari angka dan huruf yang sesuai seperti contoh dibawah
+
+a b c d e f g h i j dst
+
+1 2 3 4 5 6 7 8 9 10 dst
+
+packet 7812
+
+![7812](6packet.png)
+
+Menimbang melalui hint 1 yaitu setiap kapital dihubungkan menjadi sebuah kata SUBSTITUSI, Pada awalnya kita coba dengan mengubah source address menjadi sebuah angka kemudian dicocokan dengan nilai ip pada address packet yang tertangkap, tetapi asumsi ini salah sehingga pada akhirnya terpikirkan untuk mengecek packet 7812 dikarenakan menyadari jumlah packet hingga 8000an. Analisis dilanjutkan pada packet ke 7812 dengan mengubah nilai IP yang ada ke dalam sebuah decryptor online sehingga mendapatkan beberapa jawaban. Hint 3 memberikan sebuah constraint dari jawaban, dimana hint ini menjadi parameter kita dalam memutuskan jawaban yang tepat.
+
+![decryptoraz](az126.png)
+
+Terdapat beberapa pilihan kita pilih JDRNJA sebagai jawaban valid berdasarkan contraint dan kunci A = 1
+
 Hasil flag dari soal adalah
 
 ![term6](terminal16.png)
 
 ## SOAL 7
 #### Berapa jumlah packet yang menuju IP 184.87.193.88?
+
+Mendapatkan packet yang menuju pada IP 184.87.193.88 dengan command filter displat berikut
+
+```
+ip.dst == 184.87.193.88
+```
+
+![packet7](nomer7.png)
+
+Berdasarkan hasil yang tertangkap terdapat sejumlah 6 packet
 
 Hasil flag yang didapatkan
 
@@ -131,6 +157,12 @@ Hasil flag yang didapatkan
 ## SOAL 8
 #### Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
 
+Menggunakan command berikut
+
+```
+tcp.dstport == 80 || udp.dstport == 80
+```
+
 Hasil flag yang didapatkan 
 
 ![term8](terminal18.png)
@@ -138,12 +170,24 @@ Hasil flag yang didapatkan
 ## SOAL 9
 #### Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
 
+Menggunakan command
+
+```
+ip.src == 10.51.40.1 && ip.dst == 10.39.55.34
+```
+
 Hasil flag yang didapatkan
 
 ![term9](terminal19.png)
 
 ## SOAL 10
 #### Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
+
+Pencarian kredensial pada telnet kita lakukan dengan membaca beberapa file telnet hingga menemukan isi packet yang tepat yaitu dhafin:kesayangannyak0k0
+
+Berikut adalah isi packet yang tepat
+
+![telnet](telnet.png)
 
 Hasil flag yang didapatkan 
 
