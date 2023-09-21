@@ -28,16 +28,26 @@ b.acknowledge number(raw): 1044861039
 
 Response dari packet yang kita dapat berada pada baris paket berikutnya. Detail dari sequence number dan acknowledge number ada di paket tersebut
 
-1[response](1response.png)
+![response](1response.png)
 
 c.sequence number(raw): 1044861039
 
 d. acknowledge number(raw) : 258040696
 
+Berikut adalah hasil dari flag yang didapatkan
+
+![terminal1](terminal11.png)
+
 ## SOAL 2
 #### Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
 
 Halaman Web diatur oleh protokol HTTP(Hypertext Transfer Protocol). Maka untuk mendapatkan detailnya, digunakan command http untuk mencari semua packet yang menggunakan http. Kemudian di dalamnya dicari server dari halaman portal praktikum Jaringan Komputer. Didapatkanlah gunicorn
+
+![gunicorn](nomer2guni.png)
+
+Berikut adalah hasil flag yang didapatkan
+
+![terminal2](terminal12.png)
 
 ## SOAL 3
 #### Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut: 
@@ -48,8 +58,13 @@ ip.dst == 239.255.255.250 || ip.src == 239.255.255.250 && udp.port == 3702
 
 Filter display diatas menangkap packet yang berasal dan menuju 239.255.255.250 dengan port 3702. Maka didapatkan sebanyak 21 packet
 
+![nomer3](nomer3udp.png)
+
+
 #### b. Protokol layer transport apa yang digunakan?
 
 Protokol yang digunakan adalah UDP berdasarkan uji coba pencarian dengan udp dan tcp pada filter. 
 
+Berikut adalah hasil flag yang telah didapatkan
 
+![terminal3](terminal13.png)
