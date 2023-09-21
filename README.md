@@ -20,11 +20,15 @@ ftp.request.command == 'STOR'
 
 protokol yang digunakan adalah ftp dimana fungsinya untuk transfer file salah satunya upload file. kemudian untuk commandnya adalah STOR. Berdasarkan hasil display filter kita mendapatkan packet yang sedang menggunggah file. Detail dari nilai sequence number dan acknowledge number ada pada wireshark 
 
+![wireshark1](1request.png)
+
 a.sequence number(raw): 258040667. 
 
 b.acknowledge number(raw): 1044861039
 
 Response dari packet yang kita dapat berada pada baris paket berikutnya. Detail dari sequence number dan acknowledge number ada di paket tersebut
+
+1[response](1response.png)
 
 c.sequence number(raw): 1044861039
 
